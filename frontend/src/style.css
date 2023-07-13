@@ -1,0 +1,27 @@
+.loginPage {
+    background: url('Images/employee ms.jpeg');
+    background: linear-gradient(rgba(11, 11, 11, 0.5), rgba(10, 10, 10, 0.5)), url("./assets/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+
+.loginForm {
+    background: transparent;
+    backdrop-filter:blur(10px) brightness(80%);
+    color: white;
+    border: none;
+    height: 30vw;
+}
+
+.employee_image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.empImg {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
