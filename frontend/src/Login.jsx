@@ -32,7 +32,7 @@ function Login() {
                 <div className='text-danger'>
                     {error && error}
                 </div>
-                <h2 className='text-center mt-5'>Login</h2>
+                <h2 className='text-center mt-5'>Admin</h2>
                 <hr/>
                 <form onSubmit={handleSubmit}>
                     <div className='mb-3 mt-5'>
