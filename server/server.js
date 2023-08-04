@@ -11,7 +11,7 @@ const app = express();
 app.use(cors(
     {
         origin: ["http://localhost:5173"],
-        methods: ["POST", "GET", "PUT"],
+        methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
 ));
@@ -66,8 +66,8 @@ app.get('/get/:id', (req, res) => {
 
 app.put('/update/:id', (req, res) => {
     const id = req.params.id;
-    const sql = "UPDATE employee set salary = ? WHERE id = ?";
-    con.query(sql, [req.body.salary, id], (err, result) => {
+    const sql = "UPDATE employee set salary = ?, name = ?,email = ?, address = ?  WHERE id = ?";
+    con.query(sql, [req.body.salary, req.body.name, req.body.email, req.body.address, id], (err, result) => {
         if(err) return res.json({Error: "update employee error in sql"});
         return res.json({Status: "Success"})
     })
@@ -78,7 +78,7 @@ app.delete('/delete/:id', (req, res) => {
     const sql = "Delete FROM employee WHERE id = ?";
     con.query(sql, [id], (err, result) => {
         if(err) return res.json({Error: "delete employee error in sql"});
-        return res.json({Status: "Success"})
+        return res.json({Status: "Success", Result: result})
     })
 })
 
@@ -161,14 +161,14 @@ app.post('/employeelogin', (req, res) => {
     })
 })
 
-// app.get('/employee/:id', (req, res) => {
-//     const id = req.params.id;
-//     const sql = "SELECT * FROM employee where id = ?";
-//     con.query(sql, [id], (err, result) => {
-//         if(err) return res.json({Error: "Get employee error in sql"});
-//         return res.json({Status: "Success", Result: result})
-//     })
-// })
+app.get('/employee/:id', (req, res) => {
+    const id = req.params.id;
+    const sql = "SELECT * FROM employee where id = ?";
+    con.query(sql, [id], (err, result) => {
+        if(err) return res.json({Error: "Get employee error in sql"});
+        return res.json({Status: "Success", Result: result})
+    })
+})
 
 
 
