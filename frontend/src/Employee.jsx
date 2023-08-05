@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+
 function Employee() {
   const [data, setData] = useState([])
 
@@ -30,6 +31,8 @@ function Employee() {
   }
 
   return (
+    <div>
+
     <div className='px-5 py-3'>
       <div className='d-flex justify-content-center mt-2'>
         <h3>Employee List</h3>
@@ -66,6 +69,7 @@ function Employee() {
           </tbody>
         </table>
       </div>
+    </div>
     </div>
   )
 }

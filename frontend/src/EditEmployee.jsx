@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-
 function EditEmployee() {
 	const [data, setData] = useState({
 		name: '',

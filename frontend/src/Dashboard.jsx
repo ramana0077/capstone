@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-
+import Home from './Home'
 function Dashboard() {
 	const navigate = useNavigate()
 	axios.defaults.withCredentials = true;
@@ -13,10 +13,8 @@ function Dashboard() {
 			if(res.data.Status === "Success") {
 				if(res.data.role === "admin") {
 					navigate('/');
-				} else {
-					const id = res.data.id;
-					navigate('/employeedetail/'+id)
 				}
+
 			} else {
 				navigate('/start')
 			}
@@ -61,6 +59,7 @@ function Dashboard() {
 					<div className='p-2 d-flex justify-content-center shadow'>
 						<h4>Employee Management System</h4>						
 					</div>
+				
 					<Outlet />
 				</div>
 			</div>
