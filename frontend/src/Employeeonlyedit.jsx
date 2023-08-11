@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 
-function backpage(){
-	Navigate('/employeedetail/'+id);
-}
+// function backpage(){
+// 	Navigate('/employeedetail/'+id);
+// }
 
 function Employeeonlyedit() {
 
@@ -65,7 +65,6 @@ function Employeeonlyedit() {
 					<button type="submit" class="btn btn-primary">Update</button>
 				</div>
 			</form>
-			<button type="button" onClick={backpage}  class="btn btn-dark mr-3">Back</button>
 
 		</div>
 	)
