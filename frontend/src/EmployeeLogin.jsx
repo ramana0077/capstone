@@ -17,7 +17,7 @@ function EmployeeLogin() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8081/employeelogin', values)
+        axios.post('http://54.198.69.23:8081/employeelogin', values)
         .then(res => {
             if(res.data.Status === 'Success') {
                 const id = res.data.id;

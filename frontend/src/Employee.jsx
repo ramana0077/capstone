@@ -7,7 +7,7 @@ function Employee() {
   const [data, setData] = useState([])
 
   useEffect(()=> {
-    axios.get('http://localhost:8081/getEmployee')
+    axios.get('http://54.198.69.23:8081/getEmployee')
     .then(res => {
       if(res.data.Status === "Success") {
         setData(res.data.Result);
@@ -19,7 +19,7 @@ function Employee() {
   }, [])
 
   const handleDelete = (id) => {
-    axios.delete('http://localhost:8081/delete/'+id)
+    axios.delete('http://54.198.69.23:8081/delete/'+id)
     .then(res => {
       if(res.data.Status === "Success") {
         window.location.reload(true);
@@ -55,7 +55,7 @@ function Employee() {
               return <tr key={index}>
                   <td>{employee.name}</td>
                   <td>{
-                    <img src={`http://localhost:8081/images/`+employee.image} alt="" className='employee_image'/>
+                    <img src={`http://54.198.69.23:8081/images/`+employee.image} alt="" className='employee_image'/>
                     }</td>
                   <td>{employee.email}</td>
                   <td>{employee.address}</td>

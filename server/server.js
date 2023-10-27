@@ -10,7 +10,7 @@ import path from 'path'
 const app = express();
 app.use(cors(
     {
-        origin: ["http://localhost:5173"],
+        origin: ["http://54.198.69.23:5173"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
@@ -20,10 +20,10 @@ app.use(express.json());
 app.use(express.static('public'));
 
 const con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "signup"
+    host: "database-4.c3dnnuigew3p.us-east-1.rds.amazonaws.com",
+    user: "admin",
+    password: "Ramana007",
+    database: "demo"
 })
 
 const storage = multer.diskStorage({
