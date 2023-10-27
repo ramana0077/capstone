@@ -7,7 +7,7 @@ nohup npm run dev -- --host 0.0.0.0 > vite.log 2>&1 &
 
 # Navigate to the server directory and start the server
 cd /var/www/myapp/server
-setsid npm start > start.log 2>&1 < /dev/null &
+npm start
 
 
 
