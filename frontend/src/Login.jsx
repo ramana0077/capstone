@@ -37,7 +37,7 @@ function Login() {
                 <form onSubmit={handleSubmit}>
                     <div className='mb-3 mt-5'>
                         <label htmlFor="email"><strong>Email</strong></label>
-                        <input type="email" placeholder='Enter Email' name='email' 
+                        <input type="email" placeholder='Enter' name='email' 
                           onChange={e => setValues({...values, email: e.target.value})} className='form-control rounded-3 ' autoComplete='off'/>
                     </div>
                     <div className='mb-3 mt-2'>
