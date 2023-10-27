@@ -45,7 +45,7 @@ function Login() {
                         <input type="password" placeholder='Enter Password' name='password'
                           onChange={e => setValues({...values, password: e.target.value})} className='form-control rounded-3' />
                     </div>
-                    <button type='submit' className='btn btn-success w-100 text-center rounded-3 mt-3'> Login</button>
+                    <button type='submit' className='btn btn-success w-100 text-center rounded-3 mt-3'> Log in</button>
                     
                 </form>
             </div>
