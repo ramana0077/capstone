@@ -15,10 +15,10 @@ hooks:
       runas: root
   ApplicationStart:
     - location: scripts/application_start.sh
-      timeout: 600
+      timeout: 1200
       runas: root
   ApplicationStop:
     - location: scripts/application_stop.sh
-      timeout: 600
+      timeout: 1200
       runas: root
 
