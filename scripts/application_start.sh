@@ -7,6 +7,8 @@ nohup npm run dev -- --host 0.0.0.0 > vite.log 2>&1 &
 
 # Navigate to the server directory and start the server
 cd /var/www/myapp/server
+rm /var/www/myapp/server/node_modules/.bin/nodemon
+npm install nodemon --save-dev --force
 setsid npm start > start.log 2>&1 < /dev/null &
 
 
