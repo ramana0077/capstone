@@ -7,17 +7,17 @@ function Profile() {
   const [salary, setSalary] = useState()
 
   useEffect(() => {
-    axios.get('http://54.198.69.23:8081/adminCount')
+    axios.get('http://54.205.25.199:8081/adminCount')
 		.then(res => {
 			setAdminCount(res.data[0].admin)
 		}).catch(err => console.log(err));
 
-    axios.get('http://54.198.69.23:8081/employeeCount')
+    axios.get('http://54.205.25.199:8081/employeeCount')
 		.then(res => {
 			setEmployeeCount(res.data[0].employee)
 		}).catch(err => console.log(err));
 
-    axios.get('http://54.198.69.23:8081/salary')
+    axios.get('http://54.205.25.199:8081/salary')
 		.then(res => {
 			setSalary(res.data[0].sumOfSalary)
 		}).catch(err => console.log(err));

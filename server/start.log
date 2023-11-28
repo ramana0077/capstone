@@ -1,5 +1,5 @@
 
-> server@1.0.0 start /home/venkatramanajandhyam/capstone/server
+> server@1.0.0 start /home/ubuntu/capstone/server
 > nodemon server.js
 
 [33m[nodemon] 3.0.1[39m
@@ -8,4 +8,5 @@
 [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
 [32m[nodemon] starting `node server.js`[39m
 Running
-Error in Connection
+Connected
+[32m[nodemon] restarting due to changes...[39m
