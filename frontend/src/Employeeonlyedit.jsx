@@ -20,7 +20,7 @@ function Employeeonlyedit() {
 	const { id } = useParams();
 
 	useEffect(() => {
-		axios.get('http://54.165.69.239:8081/get/' + id)
+		axios.get('http://54.92.222.153:8081/get/' + id)
 			.then(res => {
 				setData({
 					...data, name: res.data.Result[0].name,
@@ -34,7 +34,7 @@ function Employeeonlyedit() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		axios.put('http://54.165.69.239:8081/update/' + id, data)
+		axios.put('http://54.92.222.153:8081/update/' + id, data)
 			.then(res => {
 				if (res.data.Status === "Success") {
 					alert('✅ Your Detail Updated Successfullly');

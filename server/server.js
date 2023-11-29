@@ -10,7 +10,7 @@ import path from 'path'
 const app = express();
 app.use(cors(
     {
-        origin: ["http://54.165.69.239:5173"],
+        origin: ["http://54.92.222.153:5173"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
